@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <POU Name="MAIN" Id="{e7f8665c-0059-4525-8a94-e2650ae2c275}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	bPut: BOOL;
+	fbHttpClient: FB_IotHttpClient := (sHostName:= '192.168.1.99',bKeepAlive := TRUE, tConnectionTimeout:=T#10S);
+	fbPut: FB_HttpPut;
+	bBlinkingMode: BOOL;
+	fbTimer: ton := (pt:=T#500MS);
+	nColor: UINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF NOT fbHttpClient.bConfigured THEN
+	fbHttpClient.nHostPort := 80;
+	fbHttpClient.stTLS.bNoServerCertCheck:= TRUE;
+END_IF
+
+IF fbHttpClient.bConfigured THEN
+	fbPut(bSend := bPut, fbClient:= fbHttpClient, nColor:= nColor);
+END_IF
+
+IF bBlinkingMode THEN
+	fbTimer(in:= NOT fbTimer.Q);
+	IF fbTimer.Q THEN
+		nColor:=nColor+5000;
+        IF nColor=65000 THEN
+            nColor:=0;
+        END_IF
+		IF bPut THEN
+			bPut:= FALSE;
+		ELSE
+			bPut:= TRUE;
+		END_IF
+	END_IF
+END_IF
+
+fbHttpClient.Execute();]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="19" Count="1" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="29" Count="2" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="32" Count="1" />
+      <LineId Id="35" Count="1" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="38" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,23 @@
+﻿{
+  "modules": [
+    {
+      "type": "Package",
+      "nugetId": "Beckhoff.TwinCAT.HMI.Framework"
+    },
+    {
+      "type": "Control",
+      "basePath": "Philips_Hue_ColorControl/",
+      "descriptionFile": "Description.json",
+      "toolboxCategory": "Beckhoff.TwinCAT.HMI:202"
+    }
+  ],
+  "provideMetadata": {
+    "toolbox": {
+      "Philips_Hue_Color": {
+        "200": "Philips_Hue_Color"
+      }
+    }
+  },
+  "$schema": ".hmiframework/Schema/Manifest.Schema.json",
+  "apiVersion": 1
+}

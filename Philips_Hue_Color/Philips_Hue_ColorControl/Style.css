@@ -1,0 +1,108 @@
+﻿/* General theme independed control css. */
+
+.TcHmi_Controls_Philips_Hue_Color_Philips_Hue_ColorControl {
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Philips_Hue_Color_Philips_Hue_ColorControl-Template {
+    width: 100%;
+    height: 100%;
+}
+
+.cydeus-philips-hue-body {
+    font-family: Verdana;
+    background: #e8e8e8;
+    width: 100%;
+    padding-left: 4%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.cydeus-philips-hue-body h1 {
+    margin: 0px;
+    font-size: 20px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.cydeus-philips-hue-body h2 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: gray;
+}
+
+.cydeus-philips-hue-urlLabel {
+    display: inline;
+}
+
+.cydeus-philips-hue-url {
+    width: 85%;
+    height: 30px;
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.cydeus-philips-hue-body textarea {
+    padding-top: 10px;
+    width: 95%;
+    font-family: monaco,monospace;
+    font-size: 12px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.cydeus-philips-hue-disc {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cydeus-philips-hue-btnPutColor {
+    display: block;
+    margin: auto;
+    margin-top: 270px;
+    align-items: center;
+    width: 15%;
+    min-width: 50px;
+    max-width: 200px;
+    height: 30px;
+}
+
+.cydeus-philips-hue-button {
+    display: flex;
+    justify-content: center;       
+}
+
+.cydeus-philips-hue-button button {
+    width: 15%;
+    min-width: 70px;
+    max-width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.cydeus-philips-hue-advanced {
+    visibility: collapse
+}
+
+/* If the main use for this control is interaction
+    uncomment the following lines to give user feedback:
+    This overlays the whole control with a white color
+    and change the mouse cursor */
+
+/*
+.TcHmi_Controls_$default_namespace$_Philips_Hue_Color.TcHmi_Controls_System_TcHmiControl-operate-disallowed::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    cursor: not-allowed;
+}
+*/

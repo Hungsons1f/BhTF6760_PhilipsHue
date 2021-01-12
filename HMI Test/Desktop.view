@@ -1,0 +1,14 @@
+﻿<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-mode="Content" data-tchmi-min-width="100" data-tchmi-min-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-min-height="100" data-tchmi-min-height-unit="%" data-tchmi-creator-viewport-width="1360" data-tchmi-creator-viewport-height="768" data-tchmi-width="1366" data-tchmi-height="768">
+  <div id="ViewDesktopBeckhoffLogo" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-src="Images/Beckhoff_Logo.svg" data-tchmi-left="20" data-tchmi-top="20" data-tchmi-width="194" data-tchmi-height="57">
+
+  </div>
+
+<div id="TcHmi_Controls_Http_Request_Http_RequestControl" data-tchmi-type="TcHmi.Controls.Http_Request.Http_RequestControl" data-tchmi-height="580" data-tchmi-height-unit="px" data-tchmi-left="688" data-tchmi-left-unit="px" data-tchmi-top="98" data-tchmi-top-unit="px" data-tchmi-width="367" data-tchmi-width-unit="px">
+
+</div>
+
+<div id="TcHmi_Controls_Philips_Hue_Color_Philips_Hue_ColorControl" data-tchmi-type="TcHmi.Controls.Philips_Hue_Color.Philips_Hue_ColorControl" data-tchmi-height="427" data-tchmi-height-unit="px" data-tchmi-left="20" data-tchmi-left-unit="px" data-tchmi-top="98" data-tchmi-top-unit="px" data-tchmi-width="643" data-tchmi-width-unit="px" data-tchmi-philips-hue-showadvanced="False">
+
+</div>
+
+</div>
